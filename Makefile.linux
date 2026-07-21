@@ -8,15 +8,15 @@ LDFLAGS = -lm
 SRC_DIR = src
 BUILD_DIR = build
 
-SERVER = $(BUILD_DIR)/Main
+SERVER = $(BUILD_DIR)/Server
 CLIENT = $(BUILD_DIR)/Client
 
 all: $(BUILD_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) $(SRC_DIR)/Main.c -o $(SERVER) $(LDFLAGS) 
+	$(CC) $(CFLAGS) $(INCLUDES) $(SRC_DIR)/Server.c -o $(SERVER) $(LDFLAGS) 
 	$(CC) $(CFLAGS) $(INCLUDES) $(SRC_DIR)/Client.c -o $(CLIENT) $(LDFLAGS) 
 
 alldebug:
-	$(CC) -g $(CFLAGS) $(INCLUDES) $(SRC_DIR)/Main.c -o $(SERVER) $(LDFLAGS) 
+	$(CC) -g $(CFLAGS) $(INCLUDES) $(SRC_DIR)/Server.c -o $(SERVER) $(LDFLAGS) 
 	$(CC) -g $(CFLAGS) $(INCLUDES) $(SRC_DIR)/Client.c -o $(CLIENT) $(LDFLAGS) 
 
 $(BUILD_DIR):
